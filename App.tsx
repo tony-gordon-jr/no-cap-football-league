@@ -28,15 +28,15 @@ export default function App() {
   const [showAboutModal, setShowAboutModal] = useState(false);
   const [showResourcesModal, setShowResourcesModal] = useState(false);
   
-  // Calculate time until draft date (August 31st, 8:00 PM EST)
+  // Calculate time until draft date (September 1st, 8:00 PM EST)
   const calculateTimeLeft = () => {
     const now = new Date();
     const currentYear = now.getFullYear();
-    let draftDate = new Date(`${currentYear}-08-31T20:00:00-04:00`); // August 31st, 8:00 PM EST
+    let draftDate = new Date(`${currentYear}-09-01T20:00:00-04:00`); // September 1st, 8:00 PM EST
     
     // If draft date has passed this year, use next year
     if (draftDate.getTime() < now.getTime()) {
-      draftDate = new Date(`${currentYear + 1}-08-31T20:00:00-04:00`);
+      draftDate = new Date(`${currentYear + 1}-09-01T20:00:00-04:00`);
     }
     
     const difference = draftDate.getTime() - now.getTime();
@@ -114,7 +114,7 @@ export default function App() {
 
   const stats = [
     { number: "$1,000", label: "Prize Pool" },
-    { number: "Aug 31", label: "Draft Date" }
+    { number: "Sep 1", label: "Draft Date" }
   ];
 
   const faqItems = [
@@ -128,7 +128,7 @@ export default function App() {
     },
     {
       question: "When is the draft?",
-      answer: "The draft is scheduled for Saturday, August 31st at 8:00 PM EST. All members will receive detailed instructions and access to the Sleeper app before the draft."
+      answer: "The draft is scheduled for Sunday, September 1st at 8:00 PM EST. All members will receive detailed instructions and access to the Sleeper app before the draft."
     },
     {
       question: "What are the in-season events?",
@@ -248,7 +248,7 @@ export default function App() {
       <section className="py-12 bg-[#0F0F0F]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl font-bold text-white mb-4">Draft Countdown</h3>
-          <p className="text-lg text-gray-300 mb-8">August 31st at 8:00 PM EST</p>
+          <p className="text-lg text-gray-300 mb-8">September 1st at 8:00 PM EST</p>
           
           <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
             {[
@@ -435,7 +435,7 @@ export default function App() {
                 <div>
                   <h3 className="font-semibold text-white mb-2">What to Expect:</h3>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Draft on August 31st at 8:00 PM EST via Sleeper app</li>
+                    <li>Draft on September 1st at 8:00 PM EST via Sleeper app</li>
                     <li>10-team league with standard PPR scoring</li>
                     <li>Active league chat and community engagement</li>
                     <li>Weekly power rankings and recap videos</li>
